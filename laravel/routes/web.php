@@ -30,4 +30,9 @@ Route::get('ID/{id}', function ($id){
 Route::get('user/{name?}', function ($name = 'Uzumaki Naruto'){
     echo 'Name: ' .$name;
 });
+
+Route::get('role',[
+    'middleware' => 'Role:editor',
+    'uses'       => 'TestController@index',
+]);
         
