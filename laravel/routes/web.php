@@ -22,3 +22,7 @@ Route::get('/hello', function () {
 Route::get('/kamote', function () {
     return view('kamote');
 });
+
+Route::get('ID/{id}', function ($id){
+    echo 'ID: '.$id;
+});
